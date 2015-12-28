@@ -1,0 +1,13 @@
+﻿{
+"name": "numbers",
+"content": [{
+"photos": "file:///android_asset/numbers/1.jpg",
+"signature": "Один",
+"sounds": "file:///android_asset/numbers/1.wav"
+},
+{
+"photos": "file:///android_asset/numbers/2.jpg",
+"signature": "Два",
+"sounds": "file:///android_asset/numbers/2.wav"
+}
+]}
