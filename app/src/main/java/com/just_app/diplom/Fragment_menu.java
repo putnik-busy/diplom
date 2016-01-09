@@ -1,19 +1,14 @@
 package com.just_app.diplom;
 
 
-import android.annotation.TargetApi;
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
-import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -65,7 +59,7 @@ public class Fragment_menu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_menu, container, false);
-
+            mp= new MediaPlayer();
         forward = (Button) v.findViewById(R.id.forward);
         back = (Button) v.findViewById(R.id.back);
         nameImage = (ImageView) v.findViewById(R.id.name_image);
@@ -77,24 +71,29 @@ public class Fragment_menu extends Fragment {
             public void onClick(View v) {
                 switch ((v.getId())) {
                     case R.id.forward:
+                        mp.reset();
                         if (i < mSubject.content.size() - 1) {
                             i++;
                             OnChangePhoto(i);
+
                         } else {
                             i = 0;
                             OnChangePhoto(i);
                         }
 
                         if (i == mSubject.content.size() - 1) {
+                            mp.reset();
                             OnChangePhoto(i);
                         }
                         break;
                     case R.id.back:
                         if (i == 0) {
+                            mp.reset();
                             i = mSubject.content.size() - 1;
                             OnChangePhoto(i);
                         } else if (i < mSubject.content.size()) {
                             i--;
+                            mp.reset();
                             OnChangePhoto(i);
                         }
                         break;
@@ -116,7 +115,8 @@ public class Fragment_menu extends Fragment {
                 Uri imgUri = Uri.parse(mSubject.content.get(i).photos);
                 Uri soundUri = Uri.parse(mSubject.content.get(i).sounds);
                 mName = mSubject.content.get(i).signature;
-              //  mSound = mSubject.content.get(i).sounds;
+                // mSound = mSubject.content.get(i).sounds;
+                String sound2=soundUri.getPath().substring("/android_asset/".length());
                 InputStream stream = mgr.open(
                         imgUri.getPath().substring("/android_asset/".length())
                 );
@@ -124,13 +124,15 @@ public class Fragment_menu extends Fragment {
                 nameImage.setImageDrawable(drawableView);
                 tv.setText(mName);
 
-                if (mSound != null) {
-                    mp = new MediaPlayer();
-                    mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                    mp.setDataSource(getActivity().getApplicationContext(),soundUri);
-                    mp.prepare();
-                    mp.start();
-                }
+             //  if (sound2 != null) {
+
+                    AssetFileDescriptor afd = getActivity().getAssets().openFd(sound2);
+                    mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                afd.close();
+                mp.prepare();
+                mp.start();
+
+              // }
 
             } catch (IOException e) {
                 e.printStackTrace();
