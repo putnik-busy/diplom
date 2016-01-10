@@ -22,7 +22,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/just_app/diplom/Fragment_menu.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/just_app/diplom/Fragment_menu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -55,12 +54,10 @@
       <file leaf-file-name="Fragment_menu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/just_app/diplom/Fragment_menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4388715">
+            <state vertical-scroll-proportion="0.6394984">
               <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2063#3266#0" expanded="true" />
-                <element signature="e#3265#3266#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1245,7 +1242,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Android\Project\diplom" value="4348941810642" />
+        <entry key="C:\Android\Project\diplom" value="4357309550267" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1623,7 +1620,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="88" />
-    <option name="y" value="30" />
+    <option name="y" value="12" />
     <option name="width" value="1157" />
     <option name="height" value="712" />
   </component>
@@ -1650,6 +1647,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1666,20 +1667,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1716,10 +1703,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1904,7 +1887,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="30" width="1157" height="712" extended-state="0" />
+    <frame x="88" y="12" width="1157" height="712" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1962,8 +1945,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2063#3266#0" expanded="true" />
-            <element signature="e#3265#3266#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1974,8 +1955,16 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2063#3266#0" expanded="true" />
-            <element signature="e#3265#3266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/just_app/diplom/Fragment_menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2023,7 +2012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="684" column="0" selection-start-line="684" selection-start-column="0" selection-end-line="684" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2031,10 +2019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3630363">
           <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2042,7 +2026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="2519" column="0" selection-start-line="2519" selection-start-column="0" selection-end-line="2519" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2050,7 +2033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="5174" column="0" selection-start-line="5174" selection-start-column="0" selection-end-line="5174" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2058,7 +2040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="1437" column="0" selection-start-line="1437" selection-start-column="0" selection-end-line="1437" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2066,10 +2047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-          <folding>
-            <element signature="e#13265#13266#0" expanded="false" />
-            <element signature="e#13297#13298#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2077,7 +2054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2093,18 +2069,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/just_app/diplom/Fragment_menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4388715">
+        <state vertical-scroll-proportion="0.6394984">
           <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2063#3266#0" expanded="true" />
-            <element signature="e#3265#3266#0" expanded="true" />
           </folding>
         </state>
       </provider>
