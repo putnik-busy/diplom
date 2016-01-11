@@ -5,9 +5,7 @@ import android.app.Fragment;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,29 +23,38 @@ import java.io.InputStream;
 
 
 public class Fragment_menu extends Fragment {
+
+    public static final String EXTRA_ITEM=
+            "com.just_app.diplom.item1";
     private ImageView nameImage;
     private Subject mSubject;
     private Drawable drawableView;
     private Button forward, back;
     private TextView tv;
     private String mName;
-    private String mSound;
     private MediaPlayer mp;
-    private SoundPool mSoundPool;
-    private int mTrack;
     private int i = 0;
+
+    public static Fragment_menu newInstance(String item){
+        Bundle args= new Bundle();
+        args.putSerializable(EXTRA_ITEM,item);
+        Fragment_menu fragment_menu= new Fragment_menu();
+        fragment_menu.setArguments(args);
+        return fragment_menu;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String mItem= (String)getArguments().
+                getSerializable(EXTRA_ITEM);
 
         AssetManager mgr = getActivity().getAssets();
-
         ObjectMapper mapper = new ObjectMapper();
 
         try {
             InputStream inputStream;
-            inputStream = mgr.open("numbers.xml");
+            inputStream = mgr.open(mItem);
             mSubject = mapper.readValue(inputStream, Subject.class);
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,12 +66,14 @@ public class Fragment_menu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_menu, container, false);
-            mp= new MediaPlayer();
+        mp = new MediaPlayer();
         forward = (Button) v.findViewById(R.id.forward);
         back = (Button) v.findViewById(R.id.back);
         nameImage = (ImageView) v.findViewById(R.id.name_image);
         tv = (TextView) v.findViewById(R.id.tv);
-        OnChangePhoto(i);
+
+                OnChangePhoto(i);
+
         View.OnClickListener onClickListener = new View.OnClickListener() {
 
             @Override
@@ -106,8 +115,8 @@ public class Fragment_menu extends Fragment {
         return v;
     }
 
-    public void OnChangePhoto(int i) {
 
+    public void OnChangePhoto(final int i) {
 
         AssetManager mgr = getActivity().getAssets();
         if (mSubject.content != null) {
@@ -115,8 +124,7 @@ public class Fragment_menu extends Fragment {
                 Uri imgUri = Uri.parse(mSubject.content.get(i).photos);
                 Uri soundUri = Uri.parse(mSubject.content.get(i).sounds);
                 mName = mSubject.content.get(i).signature;
-                // mSound = mSubject.content.get(i).sounds;
-                String sound2=soundUri.getPath().substring("/android_asset/".length());
+                String sound2 = soundUri.getPath().substring("/android_asset/".length());
                 InputStream stream = mgr.open(
                         imgUri.getPath().substring("/android_asset/".length())
                 );
@@ -124,15 +132,14 @@ public class Fragment_menu extends Fragment {
                 nameImage.setImageDrawable(drawableView);
                 tv.setText(mName);
 
-             //  if (sound2 != null) {
+                if (sound2 != null) {
 
                     AssetFileDescriptor afd = getActivity().getAssets().openFd(sound2);
                     mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-                afd.close();
-                mp.prepare();
-                mp.start();
-
-              // }
+                    afd.close();
+                    mp.prepare();
+                    mp.start();
+                }
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -140,5 +147,4 @@ public class Fragment_menu extends Fragment {
             }
         }
     }
-
 }
