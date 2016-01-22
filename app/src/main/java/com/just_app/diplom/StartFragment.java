@@ -3,16 +3,18 @@ package com.just_app.diplom;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class StartFragment  extends Fragment{
-   private Button Numbers,Colors,Shapes,Words;
+   private ImageButton Numbers,Shapes,Words;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +25,9 @@ public class StartFragment  extends Fragment{
                              Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.start_menu,container,false);
 
-        Colors= (Button)v.findViewById(R.id.Colors);
-        Numbers= (Button)v.findViewById(R.id.Numbers);
-        Shapes= (Button)v.findViewById(R.id.Shapes);
-        Words= (Button)v.findViewById(R.id.Words);
+        Numbers= (ImageButton)v.findViewById(R.id.Numbers);
+        Shapes= (ImageButton)v.findViewById(R.id.Shapes);
+        Words= (ImageButton)v.findViewById(R.id.Words);
 
         View.OnClickListener onClickListener= new View.OnClickListener() {
             @Override
@@ -42,14 +43,9 @@ public class StartFragment  extends Fragment{
                         p2.putExtra(Fragment_menu.EXTRA_ITEM, "words.xml");
                         startActivity(p2);
                         break;
-                    case R.id.Colors:
-                        Intent p3= new Intent(getActivity(),Activity_menu.class);
-                        p3.putExtra(Fragment_menu.EXTRA_ITEM, "colors.xml");
-                        startActivity(p3);
-                        break;
                     case R.id.Shapes:
                         Intent p4= new Intent(getActivity(),Activity_menu.class);
-                        p4.putExtra(Fragment_menu.EXTRA_ITEM, "colors.xml");
+                        p4.putExtra(Fragment_menu.EXTRA_ITEM, "shapes.xml");
                         startActivity(p4);
                         break;
                 }
@@ -58,7 +54,6 @@ public class StartFragment  extends Fragment{
 
         Numbers.setOnClickListener(onClickListener);
         Words.setOnClickListener(onClickListener);
-        Colors.setOnClickListener(onClickListener);
         Shapes.setOnClickListener(onClickListener);
 
         return v;

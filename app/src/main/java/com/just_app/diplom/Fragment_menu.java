@@ -2,6 +2,7 @@ package com.just_app.diplom;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
@@ -24,7 +25,7 @@ import java.io.InputStream;
 
 public class Fragment_menu extends Fragment {
 
-    public static final String EXTRA_ITEM=
+    public static final String EXTRA_ITEM =
             "com.just_app.diplom.item1";
     private ImageView nameImage;
     private Subject mSubject;
@@ -34,11 +35,14 @@ public class Fragment_menu extends Fragment {
     private String mName;
     private MediaPlayer mp;
     private int i = 0;
+    private AssetManager mgr;
+    private ObjectMapper mapper;
+    private String mItem;
 
-    public static Fragment_menu newInstance(String item){
-        Bundle args= new Bundle();
-        args.putSerializable(EXTRA_ITEM,item);
-        Fragment_menu fragment_menu= new Fragment_menu();
+    public static Fragment_menu newInstance(String item) {
+        Bundle args = new Bundle();
+        args.putSerializable(EXTRA_ITEM, item);
+        Fragment_menu fragment_menu = new Fragment_menu();
         fragment_menu.setArguments(args);
         return fragment_menu;
     }
@@ -46,12 +50,10 @@ public class Fragment_menu extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String mItem= (String)getArguments().
+        mItem = (String) getArguments().
                 getSerializable(EXTRA_ITEM);
-
-        AssetManager mgr = getActivity().getAssets();
-        ObjectMapper mapper = new ObjectMapper();
-
+        mgr = getActivity().getAssets();
+        mapper = new ObjectMapper();
         try {
             InputStream inputStream;
             inputStream = mgr.open(mItem);
@@ -59,7 +61,6 @@ public class Fragment_menu extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -72,7 +73,7 @@ public class Fragment_menu extends Fragment {
         nameImage = (ImageView) v.findViewById(R.id.name_image);
         tv = (TextView) v.findViewById(R.id.tv);
 
-                OnChangePhoto(i);
+        OnChangePhoto(i);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
 
@@ -115,7 +116,6 @@ public class Fragment_menu extends Fragment {
         return v;
     }
 
-
     public void OnChangePhoto(final int i) {
 
         AssetManager mgr = getActivity().getAssets();
@@ -129,6 +129,7 @@ public class Fragment_menu extends Fragment {
                         imgUri.getPath().substring("/android_asset/".length())
                 );
                 drawableView = Drawable.createFromStream(stream, null);
+
                 nameImage.setImageDrawable(drawableView);
                 tv.setText(mName);
 
@@ -147,4 +148,5 @@ public class Fragment_menu extends Fragment {
             }
         }
     }
+
 }
