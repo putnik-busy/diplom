@@ -2,29 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorphon">
+    android:background="@drawable/fon">
 
     <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:id="@+id/Numbers"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="220dp"
         android:src="@drawable/numbers"
-        android:layout_margin="16dp"
-        android:layout_gravity="center_horizontal"/>
-
+        android:layout_gravity="center_horizontal"
+        android:background="@null"/>
     <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:id="@+id/Words"
-        android:layout_margin="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/words"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="@null"/>
 
     <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:id="@+id/Shapes"
-        android:layout_margin="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
        android:src="@drawable/shapes"
+        android:background="@null"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

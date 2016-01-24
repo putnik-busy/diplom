@@ -49,10 +49,5 @@
 "photos": "file:///android_asset/numbers/9.png",
 "signature": "Девять",
 "sounds": "file:///android_asset/numbers/9.wav"
-},
-{
-"photos": "file:///android_asset/numbers/10.png",
-"signature": "Десять",
-"sounds": "file:///android_asset/numbers/10.wav"
 }
 ]}

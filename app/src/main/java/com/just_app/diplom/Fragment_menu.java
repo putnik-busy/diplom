@@ -8,6 +8,7 @@ import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -118,12 +119,13 @@ public class Fragment_menu extends Fragment {
 
     public void OnChangePhoto(final int i) {
 
-        AssetManager mgr = getActivity().getAssets();
+        mgr = getActivity().getAssets();
         if (mSubject.content != null) {
             try {
                 Uri imgUri = Uri.parse(mSubject.content.get(i).photos);
                 Uri soundUri = Uri.parse(mSubject.content.get(i).sounds);
                 mName = mSubject.content.get(i).signature;
+
                 String sound2 = soundUri.getPath().substring("/android_asset/".length());
                 InputStream stream = mgr.open(
                         imgUri.getPath().substring("/android_asset/".length())
