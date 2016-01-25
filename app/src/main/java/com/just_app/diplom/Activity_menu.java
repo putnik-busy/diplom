@@ -8,6 +8,9 @@ public class Activity_menu extends SingleFragmentActivity{
 
     @Override
     protected Fragment createFragment() {
-        return new Fragment_menu();
+
+        String item= (String)getIntent()
+                .getSerializableExtra(Fragment_menu.EXTRA_ITEM);
+        return Fragment_menu.newInstance(item);
     }
 }

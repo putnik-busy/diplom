@@ -15,10 +15,14 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
         FragmentManager fm = getFragmentManager();
-
-            Fragment_menu fragment_menu= new Fragment_menu();
+        Fragment fragment  = fm.findFragmentById(R.id.fragmentContainer);
+        //    Fragment_menu fragment_menu= new Fragment_menu();
+        if(fragment==null){
+            fragment=createFragment();
             fm.beginTransaction()
-                    .add(R.id.fragmentContainer, fragment_menu)
+                    .add(R.id.fragmentContainer, fragment)
                     .commit();
+        }
+
     }
 }
