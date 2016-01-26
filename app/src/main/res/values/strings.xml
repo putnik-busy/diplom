@@ -3,4 +3,7 @@
     <string name="Numbers">Цифры</string>
     <string name="Words">Буквы</string>
     <string name="Shapes">Фигуры</string>
+    <string name="dlg_btn_cancel">Нет</string>
+    <string name="dlg_btn_ok">Да</string>
+    <string name="dlg_btn_msg">Вы точно хотите выйти?</string>
 </resources>

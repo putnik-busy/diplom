@@ -1,10 +1,12 @@
 package com.just_app.diplom;
 
 
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +17,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class StartFragment  extends Fragment{
    private ImageButton Numbers,Shapes,Words;
+    private Button exit;
+    DialogFragment dlg;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+        dlg= new SelectDialog();
+}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,6 +33,7 @@ public class StartFragment  extends Fragment{
         Numbers= (ImageButton)v.findViewById(R.id.Numbers);
         Shapes= (ImageButton)v.findViewById(R.id.Shapes);
         Words= (ImageButton)v.findViewById(R.id.Words);
+        exit= (Button)v.findViewById(R.id.exit);
 
         View.OnClickListener onClickListener= new View.OnClickListener() {
             @Override
@@ -48,6 +54,9 @@ public class StartFragment  extends Fragment{
                         p4.putExtra(Fragment_menu.EXTRA_ITEM, "shapes.xml");
                         startActivity(p4);
                         break;
+                    case R.id.exit:
+                        dlg.show(getFragmentManager(), "dlg");
+                        break;
                 }
             }
         };
@@ -55,7 +64,9 @@ public class StartFragment  extends Fragment{
         Numbers.setOnClickListener(onClickListener);
         Words.setOnClickListener(onClickListener);
         Shapes.setOnClickListener(onClickListener);
+        exit.setOnClickListener(onClickListener);
 
         return v;
     }
+
 }
