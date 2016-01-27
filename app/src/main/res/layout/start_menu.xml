@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/Numbers"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/numbers"
         android:layout_gravity="center_horizontal"
         android:background="@null"/>
