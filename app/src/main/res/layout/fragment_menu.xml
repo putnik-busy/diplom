@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorphon">
+    android:background="@drawable/fon_layout">
 
     <ImageView
         android:layout_width="match_parent"
@@ -25,7 +25,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv"
             android:textSize="35sp"
-            android:textStyle="italic"
+            android:textStyle="normal"
+            android:textColor="@color/color_textview"
             android:layout_gravity="top|center"
             android:layout_margin="30dp"/>
     </LinearLayout>

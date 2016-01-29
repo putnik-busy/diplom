@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fon">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/exit"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Numbers"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/numbers"
-        android:layout_gravity="center_horizontal"
-        android:background="@null"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Words"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/words"
-        android:layout_gravity="center_horizontal"
-        android:background="@null"/>
+    android:background="@drawable/fon"
+    android:orientation="horizontal">
 
     <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:background="@drawable/dver"/>
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Shapes"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-       android:src="@drawable/shapes"
-        android:background="@null"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/Numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/numbers" />
+
+        <ImageButton
+            android:id="@+id/Words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/words" />
+
+        <ImageButton
+            android:id="@+id/Shapes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/shapes" />
+    </LinearLayout>
+
 </LinearLayout>

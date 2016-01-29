@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class StartFragment  extends Fragment{
    private ImageButton Numbers,Shapes,Words;
-    private Button exit;
+    private ImageButton exit;
     DialogFragment dlg;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class StartFragment  extends Fragment{
         Numbers= (ImageButton)v.findViewById(R.id.Numbers);
         Shapes= (ImageButton)v.findViewById(R.id.Shapes);
         Words= (ImageButton)v.findViewById(R.id.Words);
-        exit= (Button)v.findViewById(R.id.exit);
+        exit= (ImageButton)v.findViewById(R.id.exit);
 
         View.OnClickListener onClickListener= new View.OnClickListener() {
             @Override

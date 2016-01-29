@@ -5,5 +5,5 @@
     <string name="Shapes">Фигуры</string>
     <string name="dlg_btn_cancel">Нет</string>
     <string name="dlg_btn_ok">Да</string>
-    <string name="dlg_btn_msg">Вы точно хотите выйти?</string>
+    <string name="dlg_msg">Вы точно хотите выйти?</string>
 </resources>
