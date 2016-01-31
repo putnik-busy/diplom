@@ -30,3 +30,8 @@ proguard/
 
 # Log Files
 *.log
+*.lock
+.gradle/2.8/taskArtifacts/cache.properties.lock
+*.bin
+.gradle/2.8/taskArtifacts/fileSnapshots.bin
+*.bin

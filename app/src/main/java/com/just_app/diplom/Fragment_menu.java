@@ -1,22 +1,13 @@
 package com.just_app.diplom;
 
-
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +37,7 @@ public class Fragment_menu extends Fragment {
     private ObjectMapper mapper;
     private String mItem;
 
+
     public static Fragment_menu newInstance(String item) {
         Bundle args = new Bundle();
         args.putSerializable(EXTRA_ITEM, item);
@@ -65,11 +57,12 @@ public class Fragment_menu extends Fragment {
             InputStream inputStream;
             inputStream = mgr.open(mItem);
             mSubject = mapper.readValue(inputStream, Subject.class);
+            inputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
 
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -80,7 +73,7 @@ public class Fragment_menu extends Fragment {
         nameImage = (ImageView) v.findViewById(R.id.name_image);
         tv = (TextView) v.findViewById(R.id.tv);
 
-        OnChangePhoto(i);
+        OnChangePhoto();
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
 
@@ -89,30 +82,15 @@ public class Fragment_menu extends Fragment {
                 switch ((v.getId())) {
                     case R.id.forward:
                         mp.reset();
-                        if (i < mSubject.content.size() - 1) {
-                            i++;
-                            OnChangePhoto(i);
-
-                        } else {
-                            i = 0;
-                            OnChangePhoto(i);
-                        }
-
-                        if (i == mSubject.content.size() - 1) {
-                            mp.reset();
-                            OnChangePhoto(i);
-                        }
+                        i=(i+1)%mSubject.content.size();
+                        OnChangePhoto();
                         break;
                     case R.id.back:
-                        if (i == 0) {
                             mp.reset();
-                            i = mSubject.content.size() - 1;
-                            OnChangePhoto(i);
-                        } else if (i < mSubject.content.size()) {
-                            i--;
-                            mp.reset();
-                            OnChangePhoto(i);
-                        }
+                            i=(i-1)%mSubject.content.size();
+                        if (i<0)
+                            i=mSubject.content.size()-1;
+                            OnChangePhoto();
                         break;
                 }
             }
@@ -123,7 +101,7 @@ public class Fragment_menu extends Fragment {
         return v;
     }
 
-    public void OnChangePhoto(final int i) {
+    public  void OnChangePhoto() {
 
         mgr = getActivity().getAssets();
         if (mSubject.content != null) {
@@ -133,6 +111,7 @@ public class Fragment_menu extends Fragment {
                 mName = mSubject.content.get(i).signature;
 
                 String sound2 = soundUri.getPath().substring("/android_asset/".length());
+
                 InputStream stream = mgr.open(
                         imgUri.getPath().substring("/android_asset/".length())
                 );
@@ -149,7 +128,7 @@ public class Fragment_menu extends Fragment {
                     mp.prepare();
                     mp.start();
                 }
-
+                stream.close();
             } catch (IOException e) {
                 e.printStackTrace();
                 Log.d("sound error", "sound error");
