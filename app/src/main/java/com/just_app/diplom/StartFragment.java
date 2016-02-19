@@ -4,13 +4,10 @@ package com.just_app.diplom;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.fasterxml.jackson.databind.ObjectMapper;

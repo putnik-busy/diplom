@@ -9,6 +9,6 @@ import java.util.ArrayList;
 
 public class Subject {
     public String name;
-    public ArrayList<Content> content;
+    public  ArrayList<Content> content;
 
 }
