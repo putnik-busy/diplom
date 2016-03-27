@@ -6,4 +6,5 @@
     <string name="dlg_btn_cancel">Нет</string>
     <string name="dlg_btn_ok">Да</string>
     <string name="dlg_msg">Вы точно хотите выйти?</string>
+    <string name="selectTest">Выбери картинку с буквой:</string>
 </resources>

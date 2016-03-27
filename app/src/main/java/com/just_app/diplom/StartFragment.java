@@ -8,13 +8,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class StartFragment  extends Fragment{
    private ImageButton Numbers,Shapes,Words;
     private ImageButton exit;
+    private Button mTest;
     DialogFragment dlg;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class StartFragment  extends Fragment{
         Shapes= (ImageButton)v.findViewById(R.id.Shapes);
         Words= (ImageButton)v.findViewById(R.id.Words);
         exit= (ImageButton)v.findViewById(R.id.exit);
+
+        mTest = (Button)v.findViewById(R.id.test);
 
         View.OnClickListener onClickListener= new View.OnClickListener() {
             @Override
@@ -54,6 +56,11 @@ public class StartFragment  extends Fragment{
                     case R.id.exit:
                         dlg.show(getFragmentManager(), "dlg");
                         break;
+                    case R.id.test:
+                        Intent p5= new Intent(getActivity(),Activity_test.class);
+                        p5.putExtra(Test_Fragment.EXTRA_ITEM_TEST,"test_question.xml");
+                        startActivity(p5);
+                        break;
                 }
             }
         };
@@ -62,6 +69,7 @@ public class StartFragment  extends Fragment{
         Words.setOnClickListener(onClickListener);
         Shapes.setOnClickListener(onClickListener);
         exit.setOnClickListener(onClickListener);
+        mTest.setOnClickListener(onClickListener);
 
         return v;
     }

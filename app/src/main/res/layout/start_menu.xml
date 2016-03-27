@@ -40,6 +40,14 @@
             android:background="@null"
             android:layout_marginBottom="15dp"
             android:src="@drawable/shapes" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="проверялка"
+            android:id="@+id/test"
+            android:layout_gravity="bottom"/>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -8,7 +8,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
 
 
 public class Fragment_menu extends Fragment {
@@ -37,7 +35,6 @@ public class Fragment_menu extends Fragment {
     private AssetManager mgr;
     private ObjectMapper mapper;
     private String mItem;
-    final String TAG = "myLogs";
 
     public static Fragment_menu newInstance(String item) {
         Bundle args = new Bundle();
@@ -55,13 +52,13 @@ public class Fragment_menu extends Fragment {
         LoadMediaTask loadMediaTask = new LoadMediaTask();
         loadMediaTask.execute(mItem);
         try {
-            mSubject=loadMediaTask.get();
+            mSubject = loadMediaTask.get();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
     }
 
-    class LoadMediaTask extends AsyncTask<String,String,Subject>{
+    class LoadMediaTask extends AsyncTask<String, String, Subject> {
 
         @Override
         protected Subject doInBackground(String... params) {
@@ -83,11 +80,11 @@ public class Fragment_menu extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ViewGroup v =(ViewGroup) inflater.inflate(
+        View v = inflater.inflate(
                 R.layout.fragment_menu, container, false);
         mp = new MediaPlayer();
         Button forward = (Button) v.findViewById(R.id.forward);
-       Button back = (Button) v.findViewById(R.id.back);
+        Button back = (Button) v.findViewById(R.id.back);
         nameImage = (ImageView) v.findViewById(R.id.name_image);
         tv = (TextView) v.findViewById(R.id.tv);
         OnChangePhoto();
@@ -99,15 +96,15 @@ public class Fragment_menu extends Fragment {
                 switch ((v.getId())) {
                     case R.id.forward:
                         mp.reset();
-                        i=(i+1)%mSubject.content.size();
+                        i = (i + 1) % mSubject.content.size();
                         OnChangePhoto();
                         break;
                     case R.id.back:
-                            mp.reset();
-                            i=(i-1)%mSubject.content.size();
-                        if (i<0)
-                            i=mSubject.content.size()-1;
-                            OnChangePhoto();
+                        mp.reset();
+                        i = (i - 1) % mSubject.content.size();
+                        if (i < 0)
+                            i = mSubject.content.size() - 1;
+                        OnChangePhoto();
                         break;
                 }
             }
@@ -118,7 +115,7 @@ public class Fragment_menu extends Fragment {
         return v;
     }
 
-    public  void OnChangePhoto() {
+    public void OnChangePhoto() {
         mgr = getActivity().getAssets();
         if (mSubject.content != null) {
             try {
@@ -135,19 +132,15 @@ public class Fragment_menu extends Fragment {
                 Uri soundUri = Uri.parse(mSubject.content.get(i).sounds);
                 String sound2 = soundUri.getPath().substring("/android_asset/".length());
 
-                if (sound2 != null) {
-
-                    AssetFileDescriptor afd = getActivity().getAssets().openFd(sound2);
-                    mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-                    afd.close();
-                    mp.prepare();
-                    mp.start();
-                }
+                AssetFileDescriptor afd = getActivity().getAssets().openFd(sound2);
+                mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                afd.close();
+                mp.prepare();
+                mp.start();
                 stream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
-
 }
