@@ -1,61 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:gravity="center">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_marginBottom="10dp">
+              android:gravity="center"
+              android:orientation="vertical"
+              android:weightSum="1">
 
-    <TextView
-        android:id="@+id/textViewTestWord"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="123123"/>
-</LinearLayout>
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewTestWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="123123"
+            android:textSize="22sp"/>
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
             android:id="@+id/button_1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
             android:src="@android:drawable/btn_star"/>
 
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@android:drawable/btn_star"
-            android:id="@+id/button_2"/>
+            android:id="@+id/button_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/btn_star"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@android:drawable/btn_star"
-            android:id="@+id/button_3"/>
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@android:drawable/btn_star"
-            android:id="@+id/button_4"/>
+            android:id="@+id/button_3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/btn_star"/>
+
+        <ImageView
+            android:id="@+id/button_4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/btn_star"/>
 
     </LinearLayout>
 
+<RelativeLayout
+    android:layout_width="356dp"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Вперед"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New"
+        android:id="@+id/textView"
+        android:layout_marginRight="5dp"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/next"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/imageView"/>
+</RelativeLayout>
 </LinearLayout>
