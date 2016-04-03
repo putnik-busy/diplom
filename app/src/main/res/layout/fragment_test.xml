@@ -4,7 +4,8 @@
               android:layout_height="match_parent"
               android:gravity="center"
               android:orientation="vertical"
-              android:weightSum="1">
+              android:weightSum="1"
+    android:background="@drawable/test_fon">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,17 +70,8 @@
     </LinearLayout>
 
 <RelativeLayout
-    android:layout_width="356dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/btn_star"
-            android:id="@+id/imageView"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView"/>
 
         <Button
             android:id="@+id/next"
@@ -92,15 +84,38 @@
             android:layout_alignParentEnd="true"/>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New"
-        android:id="@+id/textView"
+        android:text="Ваш результат:"
         android:layout_marginRight="5dp"
         android:textSize="20sp"
         android:layout_alignTop="@+id/next"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/imageView"/>
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:text="0"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/starView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/estrellaua"
+        android:layout_alignBottom="@+id/scoreTextView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_below="@+id/textView"/>
+
 </RelativeLayout>
+
 </LinearLayout>

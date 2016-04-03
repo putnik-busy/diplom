@@ -7,4 +7,21 @@
     <string name="dlg_btn_ok">Да</string>
     <string name="dlg_msg">Вы точно хотите выйти?</string>
     <string name="selectTest">Выбери картинку с буквой:</string>
+
+    <string-array name="list_correct_answer">
+        <item>Верно!</item>
+        <item>Молодец!</item>
+        <item>Молодец!</item>
+        <item>Так держать!</item>
+        <item>Прекрасно!</item>
+    </string-array>
+
+    <string-array name="list_incorrect_answer">
+        <item>Попробуй еще раз!</item>
+        <item>Не сдавайся!</item>
+        <item>У тебя все впереди!</item>
+        <item>А давай еще раз?</item>
+        <item>Начни сначала!</item>
+    </string-array>
 </resources>
+
