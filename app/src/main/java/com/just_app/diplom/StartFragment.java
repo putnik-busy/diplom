@@ -31,7 +31,6 @@ public class StartFragment  extends Fragment{
         Shapes= (ImageButton)v.findViewById(R.id.Shapes);
         Words= (ImageButton)v.findViewById(R.id.Words);
         exit= (ImageButton)v.findViewById(R.id.exit);
-
         mTest = (Button)v.findViewById(R.id.test);
 
         View.OnClickListener onClickListener= new View.OnClickListener() {
