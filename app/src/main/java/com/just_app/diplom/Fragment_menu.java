@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -83,8 +83,8 @@ public class Fragment_menu extends Fragment {
         View v = inflater.inflate(
                 R.layout.fragment_menu, container, false);
         mp = new MediaPlayer();
-        Button forward = (Button) v.findViewById(R.id.forward);
-        Button back = (Button) v.findViewById(R.id.back);
+        ImageButton forward = (ImageButton) v.findViewById(R.id.forward);
+        ImageButton back = (ImageButton) v.findViewById(R.id.back);
         nameImage = (ImageView) v.findViewById(R.id.name_image);
         tv = (TextView) v.findViewById(R.id.tv);
         OnChangePhoto();
