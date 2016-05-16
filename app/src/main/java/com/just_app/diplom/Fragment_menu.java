@@ -26,6 +26,8 @@ public class Fragment_menu extends Fragment {
 
     public static final String EXTRA_ITEM =
             "com.just_app.diplom.item1";
+    public static final String EXTRA_STATE_KEY =
+            "com.just_app.diplom.state";
     private ImageView nameImage;
     private Subject mSubject;
     private TextView tv;
@@ -47,6 +49,8 @@ public class Fragment_menu extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null && savedInstanceState.containsKey(EXTRA_STATE_KEY))
+            i = savedInstanceState.getInt(EXTRA_STATE_KEY);
         mItem = (String) getArguments().
                 getSerializable(EXTRA_ITEM);
         LoadMediaTask loadMediaTask = new LoadMediaTask();
@@ -56,6 +60,12 @@ public class Fragment_menu extends Fragment {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt(EXTRA_STATE_KEY, i);
+        super.onSaveInstanceState(outState);
     }
 
     class LoadMediaTask extends AsyncTask<String, String, Subject> {
