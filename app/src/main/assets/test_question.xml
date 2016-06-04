@@ -1,0 +1,67 @@
+﻿{
+"name": "test",
+"content": [{
+"question": "Выбери картинку с буквой А",
+"answer_1": "file:///android_asset/words/1.png",
+"answer_2": "file:///android_asset/words/2.png",
+"answer_3": "file:///android_asset/words/3.png",
+"answer_4": "file:///android_asset/words/4.png",
+"correct_answer": "file:///android_asset/words/1.png"
+},
+{
+"question": "Выбери картинку с буквой Б",
+"answer_1": "file:///android_asset/words/10.png",
+"answer_2": "file:///android_asset/words/2.png",
+"answer_3": "file:///android_asset/words/13.png",
+"answer_4": "file:///android_asset/words/14.png",
+"correct_answer": "file:///android_asset/words/2.png"
+},
+{
+"question": "Выбери картинку с буквой В",
+"answer_1": "file:///android_asset/words/20.png",
+"answer_2": "file:///android_asset/words/12.png",
+"answer_3": "file:///android_asset/words/23.png",
+"answer_4": "file:///android_asset/words/3.png",
+"correct_answer": "file:///android_asset/words/3.png"
+},
+{
+"question": "Выбери картинку с фигурой Квадрат",
+"answer_1": "file:///android_asset/shapes/1.png",
+"answer_2": "file:///android_asset/shapes/5.png",
+"answer_3": "file:///android_asset/shapes/6.png",
+"answer_4": "file:///android_asset/shapes/10.png",
+"correct_answer": "file:///android_asset/shapes/1.png"
+},
+{
+"question": "Выбери картинку с фигурой Треугольник",
+"answer_1": "file:///android_asset/shapes/3.png",
+"answer_2": "file:///android_asset/shapes/15.png",
+"answer_3": "file:///android_asset/shapes/8.png",
+"answer_4": "file:///android_asset/shapes/6.png",
+"correct_answer": "file:///android_asset/shapes/3.png"
+},
+{
+"question": "Выбери картинку с цифрой 0",
+"answer_1": "file:///android_asset/numbers/0.png",
+"answer_2": "file:///android_asset/numbers/3.png",
+"answer_3": "file:///android_asset/numbers/5.png",
+"answer_4": "file:///android_asset/numbers/7.png",
+"correct_answer": "file:///android_asset/numbers/0.png"
+},
+{
+"question": "Выбери картинку с цифрой 3",
+"answer_1": "file:///android_asset/numbers/4.png",
+"answer_2": "file:///android_asset/numbers/5.png",
+"answer_3": "file:///android_asset/numbers/6.png",
+"answer_4": "file:///android_asset/numbers/3.png",
+"correct_answer": "file:///android_asset/numbers/3.png"
+},
+{
+"question": "Выбери картинку с цифрой 9",
+"answer_1": "file:///android_asset/numbers/8.png",
+"answer_2": "file:///android_asset/numbers/9.png",
+"answer_3": "file:///android_asset/numbers/4.png",
+"answer_4": "file:///android_asset/numbers/3.png",
+"correct_answer": "file:///android_asset/numbers/9.png"
+}
+]}

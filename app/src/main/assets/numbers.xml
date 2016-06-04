@@ -49,5 +49,60 @@
 "photos": "file:///android_asset/numbers/9.png",
 "signature": "Девять",
 "sounds": "file:///android_asset/numbers/9.wav"
+},
+{
+"photos": "file:///android_asset/numbers/10.png",
+"signature": "Десять",
+"sounds": "file:///android_asset/numbers/10.wav"
+},
+{
+"photos": "file:///android_asset/numbers/11.png",
+"signature": "Одиннадцать",
+"sounds": "file:///android_asset/numbers/11.wav"
+},
+{
+"photos": "file:///android_asset/numbers/12.png",
+"signature": "Двенадцать",
+"sounds": "file:///android_asset/numbers/12.wav"
+},
+{
+"photos": "file:///android_asset/numbers/13.png",
+"signature": "Тринадцать",
+"sounds": "file:///android_asset/numbers/13.wav"
+},
+{
+"photos": "file:///android_asset/numbers/14.png",
+"signature": "Четырнадцать",
+"sounds": "file:///android_asset/numbers/14.wav"
+},
+{
+"photos": "file:///android_asset/numbers/15.png",
+"signature": "Пятнадцать",
+"sounds": "file:///android_asset/numbers/15.wav"
+},
+{
+"photos": "file:///android_asset/numbers/16.png",
+"signature": "Шестнадцать",
+"sounds": "file:///android_asset/numbers/16.wav"
+},
+{
+"photos": "file:///android_asset/numbers/17.png",
+"signature": "Семнадцать",
+"sounds": "file:///android_asset/numbers/17.wav"
+},
+{
+"photos": "file:///android_asset/numbers/18.png",
+"signature": "Восемнадцать",
+"sounds": "file:///android_asset/numbers/18.wav"
+},
+{
+"photos": "file:///android_asset/numbers/19.png",
+"signature": "Девятнадцать",
+"sounds": "file:///android_asset/numbers/19.wav"
+},
+{
+"photos": "file:///android_asset/numbers/20.png",
+"signature": "Двадцать",
+"sounds": "file:///android_asset/numbers/20.wav"
 }
 ]}

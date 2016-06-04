@@ -8,7 +8,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:largeHeap="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:name=".MyApplication">
         <activity android:name=".StartMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,8 +20,11 @@
         <activity android:name=".Activity_menu"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".Activity_Pager_menu"
-            android:label="@string/app_name">
+        <activity android:name=".Activity_test"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name=".Activity_finish"
+                  android:label="@string/app_name">
         </activity>
     </application>
 

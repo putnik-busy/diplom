@@ -20,9 +20,8 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
         if (fragment == null) {
             fragment = createFragment();
             fm.beginTransaction()
-                    .add(R.id.fragmentContainer, fragment)
+                    .replace(R.id.fragmentContainer, fragment)
                     .commit();
         }
     }
-
 }
