@@ -29,6 +29,7 @@ public class Fragment_finish extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
         mResultStar = (String) getArguments()
                 .getSerializable(EXTRA_RESULT);
     }

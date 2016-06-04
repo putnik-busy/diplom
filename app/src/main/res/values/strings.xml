@@ -7,6 +7,7 @@
     <string name="dlg_btn_ok">Да</string>
     <string name="dlg_msg">Вы точно хотите выйти?</string>
     <string name="selectTest">Выбери картинку с буквой:</string>
+    <string name="count">0</string>
 
     <string-array name="list_correct_answer">
         <item>Верно!</item>

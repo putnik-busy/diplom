@@ -7,6 +7,7 @@ import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,8 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
     private int i = 0;
     private int score = 0;
     private boolean flag_answer = false;
+    public static final String EXTRA_STATE_ANSWER =
+            "com.just_app.diplom.state";
 
     public static Test_Fragment newInstance(String item) {
         Bundle args = new Bundle();
@@ -54,6 +57,9 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+        if (savedInstanceState != null && savedInstanceState.containsKey(EXTRA_STATE_ANSWER))
+            i = savedInstanceState.getInt(EXTRA_STATE_ANSWER);
         mItemQuestions = (String) getArguments()
                 .getSerializable(EXTRA_ITEM_TEST);
         LoadQuestionTask loadQuestionTask = new LoadQuestionTask();
@@ -63,6 +69,13 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(EXTRA_STATE_ANSWER, i);
+        outState.putAll(outState);
     }
 
     class LoadQuestionTask extends AsyncTask<String, String, Subject_Question> {

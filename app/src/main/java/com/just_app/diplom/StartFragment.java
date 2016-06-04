@@ -11,14 +11,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 public class StartFragment extends Fragment {
-    private ImageButton Numbers, Shapes, Words;
-    private ImageButton exit;
-    private ImageButton mTest;
     DialogFragment dlg;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
         dlg = new SelectDialog();
     }
 
@@ -26,11 +24,11 @@ public class StartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.start_menu, container, false);
-        Numbers = (ImageButton) v.findViewById(R.id.Numbers);
-        Shapes = (ImageButton) v.findViewById(R.id.Shapes);
-        Words = (ImageButton) v.findViewById(R.id.Words);
-        exit = (ImageButton) v.findViewById(R.id.exit);
-        mTest = (ImageButton) v.findViewById(R.id.test);
+        ImageButton numbers = (ImageButton) v.findViewById(R.id.Numbers);
+        ImageButton shapes = (ImageButton) v.findViewById(R.id.Shapes);
+        ImageButton words = (ImageButton) v.findViewById(R.id.Words);
+        ImageButton exit = (ImageButton) v.findViewById(R.id.exit);
+        ImageButton mTest = (ImageButton) v.findViewById(R.id.test);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -63,9 +61,9 @@ public class StartFragment extends Fragment {
             }
         };
 
-        Numbers.setOnClickListener(onClickListener);
-        Words.setOnClickListener(onClickListener);
-        Shapes.setOnClickListener(onClickListener);
+        numbers.setOnClickListener(onClickListener);
+        words.setOnClickListener(onClickListener);
+        shapes.setOnClickListener(onClickListener);
         exit.setOnClickListener(onClickListener);
         mTest.setOnClickListener(onClickListener);
         return v;

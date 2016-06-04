@@ -31,11 +31,9 @@ public class Fragment_menu extends Fragment {
     private ImageView nameImage;
     private Subject mSubject;
     private TextView tv;
-    private String mName;
     private MediaPlayer mp;
     private int i = 0;
     private AssetManager mgr;
-    private ObjectMapper mapper;
     private String mItem;
 
     public static Fragment_menu newInstance(String item) {
@@ -49,6 +47,7 @@ public class Fragment_menu extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
         if (savedInstanceState != null && savedInstanceState.containsKey(EXTRA_STATE_KEY))
             i = savedInstanceState.getInt(EXTRA_STATE_KEY);
         mItem = (String) getArguments().
@@ -64,8 +63,8 @@ public class Fragment_menu extends Fragment {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putInt(EXTRA_STATE_KEY, i);
         super.onSaveInstanceState(outState);
+        outState.putInt(EXTRA_STATE_KEY, i);
     }
 
     class LoadMediaTask extends AsyncTask<String, String, Subject> {
@@ -73,7 +72,7 @@ public class Fragment_menu extends Fragment {
         @Override
         protected Subject doInBackground(String... params) {
             mgr = getActivity().getAssets();
-            mapper = new ObjectMapper();
+            ObjectMapper mapper = new ObjectMapper();
             try {
 
                 InputStream inputStream;
@@ -136,7 +135,7 @@ public class Fragment_menu extends Fragment {
                 Drawable drawableView = Drawable.createFromStream(stream, null);
                 nameImage.setImageDrawable(drawableView);
 
-                mName = mSubject.content.get(i).signature;
+                String mName = mSubject.content.get(i).signature;
                 tv.setText(mName);
 
                 Uri soundUri = Uri.parse(mSubject.content.get(i).sounds);
