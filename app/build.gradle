@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias '6282543sergeynataha'
+            keyPassword '6282543sergeynataha'
+            storeFile file('C:/Android/key/my_key.jks')
+            storePassword '6282543sergeynataha'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
     defaultConfig {
         applicationId "com.just_app.diplom"
         minSdkVersion 15

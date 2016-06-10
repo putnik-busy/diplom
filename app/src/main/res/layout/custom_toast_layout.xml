@@ -7,19 +7,20 @@
     <ImageView
         android:id="@+id/toast_view"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:layout_toLeftOf="@+id/toast_text"
         android:layout_toStartOf="@+id/toast_text"
         android:src="@drawable/helper"/>
 
     <TextView
         android:id="@+id/toast_text"
-        android:layout_width="140dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/toast_view"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:textSize="24sp"/>
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
 
 </RelativeLayout>

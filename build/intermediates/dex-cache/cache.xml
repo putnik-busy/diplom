@@ -2,74 +2,60 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.4.1\b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c\jackson-core-2.4.1.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\jackson-core-2.4.1_c9291294cc179bf0dcc6588cf018489877b1e4f0.jar" />
-    </item>
-    <item
-        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_6ededcc9b39f46fbcdd6efbd1a4d51bb6afd2a15.jar" />
-    </item>
-    <item
         jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.5_016ef1374a04bb6f004ecd0b030616cc596ede2d.jar" />
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\universal-image-loader-1.9.5_016ef1374a04bb6f004ecd0b030616cc596ede2d.jar" />
     </item>
     <item
         jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_f5bc849c0b998d2ea51ad5131e9485153d820c03.jar" />
-    </item>
-    <item
-        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_41931874b92b0f0a258b2bb295da28c4715940ea.jar" />
-    </item>
-    <item
-        jar="C:\Android\Project\diplom\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="2fc5766c40f3dd513132154e158403b749f2b41c">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_7f9e46e1deb49657ec21e6dfceceef2a0cc41189.jar" />
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.1.1_f5bc849c0b998d2ea51ad5131e9485153d820c03.jar" />
     </item>
     <item
         jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_c7568ecf513e5008eca66e53f89f9f44fee6e59a.jar" />
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\internal_impl-23.1.1_c7568ecf513e5008eca66e53f89f9f44fee6e59a.jar" />
     </item>
     <item
-        jar="C:\Android\Project\diplom\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.4.1\b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c\jackson-core-2.4.1.jar"
+        jumboMode="false"
         revision="23.0.2"
-        sha1="bb9113c4c13ef5f6971a2ba324d97aea407630c2">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\instant-run_6155d3fe143165b97a4e8763fc5dfe0d978ef8c1.jar" />
+        sha1="b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-core-2.4.1_c9291294cc179bf0dcc6588cf018489877b1e4f0.jar" />
+    </item>
+    <item
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.1.1_41931874b92b0f0a258b2bb295da28c4715940ea.jar" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\support-annotations-23.1.1_6ededcc9b39f46fbcdd6efbd1a4d51bb6afd2a15.jar" />
     </item>
     <item
         jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.4.1\55605135bd7b836612e0bba7037c9669f6ccf89f\jackson-annotations-2.4.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="55605135bd7b836612e0bba7037c9669f6ccf89f">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.4.1_d53addfb1da1f6ccf9026455306ee8a97104985e.jar" />
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-annotations-2.4.1_d53addfb1da1f6ccf9026455306ee8a97104985e.jar" />
     </item>
     <item
         jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.4.1\f07c773f7b3a03c3801d405cadbdc93f7548e321\jackson-databind-2.4.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="f07c773f7b3a03c3801d405cadbdc93f7548e321">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\debug\jackson-databind-2.4.1_1f65cfc07e7149e5b90a26c5757ebf1885e612d3.jar" />
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-databind-2.4.1_1f65cfc07e7149e5b90a26c5757ebf1885e612d3.jar" />
     </item>
 
 </items>
