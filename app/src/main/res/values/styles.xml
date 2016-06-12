@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -6,6 +6,182 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="button_exit_medium">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:background">@drawable/nut</item>
+    </style>
+
+    <style name="button_exit_large">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:background">@drawable/nut</item>
+    </style>
+
+    <style name="button_exit_xLarge">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:background">@drawable/nut</item>
+    </style>
+
+    <style name="button_test_medium">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_gravity">center_horizontal|top</item>
+        <item name="android:background">@drawable/check</item>
+    </style>
+
+    <style name="button_test_large">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_gravity">center_horizontal|top</item>
+        <item name="android:background">@drawable/check</item>
+    </style>
+
+    <style name="button_test_xLarge">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_gravity">center_horizontal|top</item>
+        <item name="android:background">@drawable/check</item>
+    </style>
+
+    <style name="linear_categories">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="buttons_categories">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="information_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="test_image_question">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="test_score_question">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="test_image_score">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_toRightOf">@+id/scoreTextView</item>
+    </style>
+
+    <style name="next_button">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@drawable/forward_arrow</item>
+    </style>
+
+    <style name="image_switcher">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="finish_text_info">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="finish_text_info_result">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="finish_text_result">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="home_button">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/home</item>
+    </style>
+
+    <style name="text_quit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/color_text_dialog_5</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_quit_no">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/mybutton</item>
+        <item name="android:textColor">@color/color_text_dialog_5</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_quit_yes">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:background">@drawable/mybutton</item>
+        <item name="android:textColor">@color/color_text_dialog_5</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toast">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_toLeftOf">@+id/toast_text</item>
+        <item name="android:layout_toStartOf">@+id/toast_text</item>
+    </style>
+
+    <style name="text_toast">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignBottom">@+id/toast_view</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
 </resources>

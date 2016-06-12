@@ -6,8 +6,24 @@
     <string name="dlg_btn_cancel">Нет</string>
     <string name="dlg_btn_ok">Да</string>
     <string name="dlg_msg">Вы точно хотите выйти?</string>
-    <string name="selectTest">Выбери картинку с буквой:</string>
     <string name="count">0</string>
+    <string name="pop_up_assistant">всплывающий помощник</string>
+    <string name="exit">выход</string>
+    <string name="category_numbers">категория цифры</string>
+    <string name="category_words">категория буквы</string>
+    <string name="category_shapes">категория фигуры</string>
+    <string name="testing">тестирование</string>
+    <string name="number_of_stars">0</string>
+    <string name="option_1">вариант_1</string>
+    <string name="option_2">вариант_2</string>
+    <string name="option_3">вариант_3</string>
+    <string name="option_4">вариант_4</string>
+    <string name="stars">звезда</string>
+    <string name="next">кнопка далее</string>
+    <string name="back">кнопка назад</string>
+    <string name="finish_text">Вы закончили тестирование!</string>
+    <string name="your_score">Ваш результат:</string>
+    <string name="back_main">выход на главное меню</string>
 
     <string-array name="list_correct_answer">
         <item>Верно!</item>

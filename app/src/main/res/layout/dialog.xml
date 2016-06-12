@@ -2,47 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/myshape">
+    android:background="@drawable/myshape"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/dlg_msg"
         android:id="@+id/text_dialog"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/color_text_dialog_5"
-        android:layout_marginBottom="15dp"/>
+        style="@style/text_quit"
+        android:text="@string/dlg_msg"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/mybutton"
-            android:textColor="@color/color_text_dialog_5"
-            android:textStyle="bold"
-            android:text="@string/dlg_btn_cancel"/>
+            style="@style/button_quit_no"
+            android:text="@string/dlg_btn_cancel" />
+
         <Button
             android:id="@+id/btn_yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/mybutton"
-            android:textColor="@color/color_text_dialog_5"
-            android:textStyle="bold"
+            style="@style/button_quit_yes"
             android:text="@string/dlg_btn_ok" />
-
     </LinearLayout>
-
 </LinearLayout>

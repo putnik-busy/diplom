@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toast_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/toast_view"
-        android:layout_width="match_parent"
+        style="@style/toast"
         android:layout_height="200dp"
-        android:layout_toLeftOf="@+id/toast_text"
-        android:layout_toStartOf="@+id/toast_text"
-        android:src="@drawable/helper"/>
+        android:contentDescription="@string/pop_up_assistant"
+        android:src="@drawable/helper" />
 
     <TextView
         android:id="@+id/toast_text"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/toast_view"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"/>
-
+        style="@style/text_toast"
+        android:layout_width="170dp"
+        android:textSize="30sp" />
 </RelativeLayout>

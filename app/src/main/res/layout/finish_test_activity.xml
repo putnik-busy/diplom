@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/fon_layout"
-              android:gravity="center"
-              android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon_layout"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Вы закончили тестирование!"
-        android:textSize="20sp"/>
+        style="@style/finish_text_info"
+        android:text="@string/finish_text"
+        android:textSize="30sp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ваш результат:"
-        android:textSize="20sp"/>
+        style="@style/finish_text_info_result"
+        android:text="@string/your_score"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/result_star"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"/>
+        style="@style/finish_text_result"
+        android:textSize="30sp"
+        tools:text="результат" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/estrellaua"/>
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/stars"
+        android:src="@drawable/estrellaua" />
 
     <ImageButton
         android:id="@+id/back_main"
+        style="@style/home_button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/home"
-        android:layout_gravity="center_horizontal"/>
+        android:contentDescription="@string/back_main" />
 </LinearLayout>

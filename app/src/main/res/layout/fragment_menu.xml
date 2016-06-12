@@ -9,48 +9,35 @@
 
     <TextView
         android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/information_label"
         android:layout_above="@+id/imageSwitcher"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="top|center"
-        android:textColor="@color/color_textview"
-        android:textSize="35sp"
-        android:textStyle="normal"
-        tools:text="123" />
+        android:textSize="30sp"
+        tools:text="Текст картинки" />
 
     <ImageSwitcher
         android:id="@+id/imageSwitcher"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="15dp"/>
+        style="@style/image_switcher"
+        android:layout_height="350dp" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
+        android:layout_margin="5dp">
 
         <ImageButton
             android:id="@+id/back"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/backward_arrow" />
+            android:background="@drawable/backward_arrow"
+            android:contentDescription="@string/back" />
 
         <ImageButton
             android:id="@+id/forward"
+            style="@style/next_button"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/forward_arrow" />
+            android:contentDescription="@string/next" />
     </RelativeLayout>
 </RelativeLayout>

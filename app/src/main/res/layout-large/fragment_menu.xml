@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon_layout"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv"
+        style="@style/information_label"
+        android:layout_above="@+id/imageSwitcher"
+        android:textSize="36sp"
+        tools:text="Текст картинки" />
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        style="@style/image_switcher"
+        android:layout_height="550dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/backward_arrow"
+            android:contentDescription="@string/back" />
+
+        <ImageButton
+            android:id="@+id/forward"
+            style="@style/next_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/next" />
+    </RelativeLayout>
+</RelativeLayout>
