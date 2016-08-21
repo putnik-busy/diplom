@@ -8,15 +8,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Fragment_finish extends Fragment implements View.OnClickListener {
     public static final String EXTRA_RESULT = "com.just_app.diplom.result";
     private String mResultStar;
-    private TextView result_star;
-    private ImageButton back_main;
 
     public static Fragment_finish newInstance(String result) {
         Bundle args = new Bundle();
@@ -39,8 +36,8 @@ public class Fragment_finish extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(
                 R.layout.finish_test_activity, container, false);
-        result_star = (TextView) v.findViewById(R.id.result_star);
-        back_main = (ImageButton) v.findViewById(R.id.back_main);
+        TextView result_star = (TextView) v.findViewById(R.id.result_star);
+        ImageButton back_main = (ImageButton) v.findViewById(R.id.back_main);
         back_main.setOnClickListener(this);
         result_star.setText(mResultStar);
         return v;

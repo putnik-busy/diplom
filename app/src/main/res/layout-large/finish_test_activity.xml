@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon_layout"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/finish_text_info"
+        android:text="@string/finish_text"
+        android:textSize="36sp" />
+
+    <TextView
+        style="@style/finish_text_info_result"
+        android:text="@string/your_score"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/result_star"
+        style="@style/finish_text_result"
+        android:textSize="36sp"
+        tools:text="результат" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/stars"
+        android:src="@drawable/estrellaua" />
+
+    <ImageButton
+        android:id="@+id/back_main"
+        style="@style/home_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/back_main" />
+</LinearLayout>

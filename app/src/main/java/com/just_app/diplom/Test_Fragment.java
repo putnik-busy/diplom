@@ -7,7 +7,7 @@ import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,19 +32,19 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
 
     public static final String EXTRA_ITEM_TEST =
             "com.just_app.diplom.item";
-    private ImageView view_1;
-    private ImageView view_2;
-    private ImageView view_3;
-    private ImageView view_4;
+    private ImageView view_1, view_2, view_3, view_4;
+    ImageButton next;
     private TextView textViewTestWord, scoreTextView;
     private String mItemQuestions;
     private Subject_Question mSubQuest;
     private AssetManager mgr;
+    Toast toast;
     private int i = 0;
     private int score = 0;
     private boolean flag_answer = false;
     public static final String EXTRA_STATE_ANSWER =
             "com.just_app.diplom.state";
+    TextView text;
 
     public static Test_Fragment newInstance(String item) {
         Bundle args = new Bundle();
@@ -152,15 +152,8 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
                     custom_Toast(v);
                     break;
                 case R.id.next:
-                    if (i == mSubQuest.content.size() - 1) {
-                        Intent finish = new Intent(getActivity(), Activity_finish.class);
-                        finish.putExtra(Fragment_finish.EXTRA_RESULT, String.valueOf(score));
-                        startActivity(finish);
-                    } else if (i < mSubQuest.content.size() - 1) {
-                        i++;
-                        onChangeQuestion();
-                        lock_Button(true);
-                    }
+                    nextStep();
+                    break;
             }
     }
 
@@ -169,7 +162,7 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
         view_2 = (ImageView) v.findViewById(R.id.button_2);
         view_3 = (ImageView) v.findViewById(R.id.button_3);
         view_4 = (ImageView) v.findViewById(R.id.button_4);
-        ImageButton next = (ImageButton) v.findViewById(R.id.next);
+        next = (ImageButton) v.findViewById(R.id.next);
         scoreTextView = (TextView) v.findViewById(R.id.scoreTextView);
         textViewTestWord = (TextView) v.findViewById(R.id.textViewTestWord);
         view_1.setOnClickListener(this);
@@ -179,30 +172,45 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
         next.setOnClickListener(this);
     }
 
-    public void custom_Toast(View toast) {
-        String[] correct_answer = getResources().getStringArray(R.array.list_correct_answer);
-        String[] incorrect_answer = getResources().getStringArray(R.array.list_incorrect_answer);
-        List correct_answer_list = Arrays.asList(correct_answer);
-        List incorrect_answer_list = Arrays.asList(incorrect_answer);
-        Collections.shuffle(correct_answer_list);
-        Collections.shuffle(incorrect_answer_list);
-        Random random = new Random();
-        LayoutInflater inflater = getActivity().getLayoutInflater();
-        View layout = inflater.inflate(R.layout.custom_toast_layout,
-                (ViewGroup) toast.findViewById(R.id.toast_layout));
-        TextView text = (TextView) layout.findViewById(R.id.toast_text);
-        if (flag_answer) {
-            lock_Button(false);
-            scoreTextView.setText("" + ++score);
-            text.setText(String.valueOf(correct_answer_list.get(random.nextInt(5))));
-        } else {
-            text.setText(String.valueOf(incorrect_answer_list.get(random.nextInt(5))));
+    public void custom_Toast(View v) {
+        if (toast == null) {
+            String[] correct_answer = getResources().getStringArray(R.array.list_correct_answer);
+            String[] incorrect_answer = getResources().getStringArray(R.array.list_incorrect_answer);
+            List correct_answer_list = Arrays.asList(correct_answer);
+            List incorrect_answer_list = Arrays.asList(incorrect_answer);
+            Collections.shuffle(correct_answer_list);
+            Collections.shuffle(incorrect_answer_list);
+            Random random = new Random();
+            toast = new Toast(getActivity().getApplicationContext());
+            LayoutInflater inflater = getActivity().getLayoutInflater();
+            View layout = inflater.inflate(R.layout.custom_toast_layout,
+                    (ViewGroup) v.findViewById(R.id.toast_layout));
+            text = (TextView) layout.findViewById(R.id.toast_text);
+            if (flag_answer) {
+                lock_Button(false);
+                scoreTextView.setText(String.valueOf(++score));
+                text.setText(String.valueOf(correct_answer_list.get(random.nextInt(5))));
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        nextStep();
+                    }
+                }, 1000);
+            } else {
+                text.setText(String.valueOf(incorrect_answer_list.get(random.nextInt(5))));
+            }
+
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -50);
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setView(layout);
+            toast.show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    toast = null;
+                }
+            }, 2000);
         }
-        Toast tost = new Toast(getActivity().getApplicationContext());
-        tost.setGravity(Gravity.CENTER_VERTICAL, 0,-50);
-        tost.setDuration(Toast.LENGTH_SHORT);
-        tost.setView(layout);
-        tost.show();
     }
 
     public void lock_Button(boolean type_lock) {
@@ -216,5 +224,20 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
         String stream = imgUri.getPath().substring("/android_asset/".length());
         String add = "assets://" + stream;
         ImageLoader.getInstance().displayImage(add, view);
+    }
+
+    public void nextStep() {
+        if (toast != null) {
+            toast.cancel();
+        }
+        if (i == mSubQuest.content.size() - 1) {
+            Intent finish = new Intent(getActivity(), Activity_finish.class);
+            finish.putExtra(Fragment_finish.EXTRA_RESULT, String.valueOf(score));
+            startActivity(finish);
+        } else if (i < mSubQuest.content.size() - 1) {
+            i++;
+            onChangeQuestion();
+            lock_Button(true);
+        }
     }
 }
