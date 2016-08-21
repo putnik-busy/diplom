@@ -10,14 +10,16 @@
     <TextView
         android:id="@+id/tv"
         style="@style/information_label"
-        android:layout_above="@+id/imageSwitcher"
         android:textSize="40sp"
-        tools:text="Текст картинки" />
+        tools:text="Текст картинки"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageSwitcher
         android:id="@+id/imageSwitcher"
         style="@style/image_switcher"
-        android:layout_height="550dp" />
+        android:layout_height="450dp" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"

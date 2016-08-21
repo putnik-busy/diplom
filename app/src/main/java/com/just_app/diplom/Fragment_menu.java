@@ -3,7 +3,6 @@ package com.just_app.diplom;
 import android.app.Fragment;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -21,13 +20,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.ExecutionException;
 
-import static android.view.GestureDetector.*;
-import static android.widget.ViewSwitcher.*;
+import static android.view.GestureDetector.OnGestureListener;
+import static android.widget.ViewSwitcher.OnTouchListener;
+import static android.widget.ViewSwitcher.ViewFactory;
 
 
 public class Fragment_menu extends Fragment implements ViewFactory,
@@ -154,11 +155,7 @@ public class Fragment_menu extends Fragment implements ViewFactory,
         if (mSubject.content != null) {
             try {
                 Uri imgUri = Uri.parse(mSubject.content.get(position).photos);
-                InputStream stream = mgr.open(
-                        imgUri.getPath().substring("/android_asset/".length())
-                );
-                Drawable drawableView = Drawable.createFromStream(stream, null);
-                mImageSwitcher.setImageDrawable(drawableView);
+                iteration_Change_Question(imgUri,mImageSwitcher);
 
                 String mName = mSubject.content.get(position).signature;
                 tv.setText(mName);
@@ -171,7 +168,6 @@ public class Fragment_menu extends Fragment implements ViewFactory,
                 afd.close();
                 mp.prepare();
                 mp.start();
-                stream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -180,7 +176,9 @@ public class Fragment_menu extends Fragment implements ViewFactory,
 
     @Override
     public View makeView() {
-        return new ImageView(getActivity());
+       ImageView imageView = new ImageView(getActivity());
+        imageView.setScaleType(ImageView.ScaleType.FIT_END);
+        return imageView;
     }
 
     @Override
@@ -238,5 +236,11 @@ public class Fragment_menu extends Fragment implements ViewFactory,
         if (position < 0)
             position = mSubject.content.size() - 1;
         mImageSwitcher.startAnimation(out);
+    }
+
+    public void iteration_Change_Question(Uri imgUri, ImageSwitcher view) {
+        String stream = imgUri.getPath().substring("/android_asset/".length());
+        String add = "assets://" + stream;
+        ImageLoader.getInstance().displayImage(add, new CustomViewAware(view,getActivity()));
     }
 }

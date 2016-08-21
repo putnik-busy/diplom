@@ -8,7 +8,6 @@
     <TextView
         android:id="@+id/textViewTestWord"
         style="@style/information_label"
-        android:layout_above="@+id/linearLayout3"
         android:textSize="40sp"
         tools:text="Текст вопроса" />
 
