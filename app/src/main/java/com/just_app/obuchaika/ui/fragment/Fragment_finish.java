@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.fragment;
 
 
 import android.app.Fragment;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.just_app.obuchaika.R;
+import com.just_app.obuchaika.ui.activity.StartMenu;
 
 public class Fragment_finish extends Fragment implements View.OnClickListener {
     public static final String EXTRA_RESULT = "com.just_app.diplom.result";

@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.model;
 
 public class Content_Question {
     public String question;

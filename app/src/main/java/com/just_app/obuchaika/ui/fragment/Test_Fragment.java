@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.fragment;
 
 
 import android.app.Fragment;
@@ -18,6 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.just_app.obuchaika.model.Subject_Question;
+import com.just_app.obuchaika.R;
+import com.just_app.obuchaika.ui.activity.Activity_finish;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.IOException;

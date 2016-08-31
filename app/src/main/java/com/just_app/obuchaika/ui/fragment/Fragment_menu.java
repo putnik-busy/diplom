@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.fragment;
 
 import android.app.Fragment;
 import android.content.res.AssetFileDescriptor;
@@ -20,6 +20,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.just_app.obuchaika.utils.CustomViewAware;
+import com.just_app.obuchaika.model.Subject;
+import com.just_app.obuchaika.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.IOException;

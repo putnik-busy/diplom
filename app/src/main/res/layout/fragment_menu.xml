@@ -11,13 +11,13 @@
         android:id="@+id/tv"
         style="@style/information_label"
         android:textSize="30sp"
-        tools:text="Текст картинки"
-        android:layout_above="@+id/imageSwitcher"/>
+        android:layout_marginTop="50dp"
+        tools:text="Текст картинки" />
 
     <ImageSwitcher
         android:id="@+id/imageSwitcher"
         style="@style/image_switcher"
-        android:layout_height="250dp" />
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"

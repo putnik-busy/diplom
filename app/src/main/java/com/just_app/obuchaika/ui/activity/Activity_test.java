@@ -1,7 +1,9 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.activity;
 
 
 import android.app.Fragment;
+
+import com.just_app.obuchaika.ui.fragment.Test_Fragment;
 
 public class Activity_test extends SingleFragmentActivity {
     @Override

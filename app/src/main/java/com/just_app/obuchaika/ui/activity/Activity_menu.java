@@ -1,8 +1,10 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.activity;
 
 import android.app.Fragment;
 
-public class Activity_menu extends SingleFragmentActivity{
+import com.just_app.obuchaika.ui.fragment.Fragment_menu;
+
+public class Activity_menu extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {

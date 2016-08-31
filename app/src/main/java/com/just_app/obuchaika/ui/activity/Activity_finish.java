@@ -1,9 +1,11 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.activity;
 
 
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.just_app.obuchaika.ui.fragment.Fragment_finish;
 
 public class Activity_finish extends SingleFragmentActivity {
     @Override

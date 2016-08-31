@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.just_app.diplom"
+    package="com.just_app.obuchaika"
     android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
-        android:name=".MyApplication"
+        android:name="com.just_app.obuchaika.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".StartMenu"
+            android:name="com.just_app.obuchaika.ui.activity.StartMenu"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,15 +20,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity_menu"
+            android:name="com.just_app.obuchaika.ui.activity.Activity_menu"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity_test"
+            android:name="com.just_app.obuchaika.ui.activity.Activity_test"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity_finish"
+            android:name="com.just_app.obuchaika.ui.activity.Activity_finish"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
     </application>

@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

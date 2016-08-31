@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.dialog;
 
 import android.app.DialogFragment;
 import android.content.DialogInterface;
@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+
+import com.just_app.obuchaika.R;
+
 public class SelectDialog extends DialogFragment implements View.OnClickListener {
 
 

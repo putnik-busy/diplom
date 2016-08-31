@@ -19,7 +19,7 @@
     <ImageSwitcher
         android:id="@+id/imageSwitcher"
         style="@style/image_switcher"
-        android:layout_height="450dp" />
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"

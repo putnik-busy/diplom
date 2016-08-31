@@ -1,4 +1,4 @@
-package com.just_app.diplom;
+package com.just_app.obuchaika.ui.fragment;
 
 
 import android.app.DialogFragment;
@@ -9,6 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import com.just_app.obuchaika.R;
+import com.just_app.obuchaika.ui.dialog.SelectDialog;
+import com.just_app.obuchaika.ui.activity.Activity_menu;
+import com.just_app.obuchaika.ui.activity.Activity_test;
 
 public class StartFragment extends Fragment {
     DialogFragment dlg;
