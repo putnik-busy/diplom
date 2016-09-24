@@ -25,6 +25,7 @@
     <style name="button_exit_xLarge">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
         <item name="android:layout_marginTop">100dp</item>
         <item name="android:background">@drawable/nut</item>
     </style>
@@ -50,8 +51,8 @@
     <style name="button_test_xLarge">
         <item name="android:layout_width">170dp</item>
         <item name="android:layout_height">100dp</item>
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_marginLeft">-5dp</item>
+        <item name="android:layout_marginTop">50dp</item>
         <item name="android:layout_gravity">center_horizontal|top</item>
         <item name="android:background">@drawable/check</item>
     </style>
@@ -172,13 +173,11 @@
     <style name="toast">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_toLeftOf">@+id/toast_text</item>
-        <item name="android:layout_toStartOf">@+id/toast_text</item>
     </style>
 
     <style name="text_toast">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_alignBottom">@+id/toast_view</item>
-        <item name="android:layout_alignParentEnd">true</item>
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:textColor">@android:color/black</item>

@@ -21,21 +21,21 @@
         <ImageButton
             android:id="@+id/Numbers"
             style="@style/buttons_categories"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:contentDescription="@string/category_numbers"
             android:src="@drawable/numbers" />
 
         <ImageButton
             android:id="@+id/Words"
             style="@style/buttons_categories"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:contentDescription="@string/category_words"
             android:src="@drawable/words" />
 
         <ImageButton
             android:id="@+id/Shapes"
             style="@style/buttons_categories"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="70dp"
             android:contentDescription="@string/category_shapes"
             android:src="@drawable/shapes" />
 
