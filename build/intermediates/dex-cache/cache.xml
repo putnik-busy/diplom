@@ -2,74 +2,157 @@
 <items version="2" >
 
     <item
-        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_fc18a0fdc80391aaf9a93e629f1a6f03cf6a9cf4.jar" />
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-tasks-10.0.1_463e520f5f5e70423a4025901f42a3058638b4ab.jar" />
     </item>
     <item
-        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\10.0.1\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.4.0_3345264907fd3b9378e0b6b0dfc5889b4c6debfb.jar" />
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-crash-10.0.1_7d1dd186dad72ef3606c17a95526cf1a07f95def.jar" />
     </item>
     <item
-        jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\universal-image-loader-1.9.5_016ef1374a04bb6f004ecd0b030616cc596ede2d.jar" />
-    </item>
-    <item
+        is-multidex="false"
         jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.4.0_40af56a945ea9682f0c9f7c3486561e133a10a67.jar" />
     </item>
     <item
-        jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.4.1\f07c773f7b3a03c3801d405cadbdc93f7548e321\jackson-databind-2.4.1.jar"
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
-        sha1="f07c773f7b3a03c3801d405cadbdc93f7548e321">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-databind-2.4.1_1f65cfc07e7149e5b90a26c5757ebf1885e612d3.jar" />
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-10.0.1_2d2ecbf46bfd47ca8155214e2cb70bb4c976d18a.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\universal-image-loader-1.9.5_016ef1374a04bb6f004ecd0b030616cc596ede2d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-analytics-impl-10.0.1_b7630cecccadbf4ecde7c4ab2fd5faa0b338bba5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\internal_impl-24.0.0_2a29285b3ad9d4714043aebb57e9d8ddddd37685.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.4.0_3345264907fd3b9378e0b6b0dfc5889b4c6debfb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-iid-10.0.1_a25a818397e2df81c35420776d52f21b2ec59a62.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.4.1\55605135bd7b836612e0bba7037c9669f6ccf89f\jackson-annotations-2.4.1.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="55605135bd7b836612e0bba7037c9669f6ccf89f">
         <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-annotations-2.4.1_d53addfb1da1f6ccf9026455306ee8a97104985e.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.4.1\f07c773f7b3a03c3801d405cadbdc93f7548e321\jackson-databind-2.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f07c773f7b3a03c3801d405cadbdc93f7548e321">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-databind-2.4.1_1f65cfc07e7149e5b90a26c5757ebf1885e612d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-analytics-10.0.1_31f1c37b7bf5fef3211a14632a04e369de4cb61f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Sergey\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.4.1\b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c\jackson-core-2.4.1.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c">
         <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\jackson-core-2.4.1_c9291294cc179bf0dcc6588cf018489877b1e4f0.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\support-annotations-24.0.0_fe7480820c20c289a17422f6ee907fbcc1697ea1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.google.firebase-firebase-common-10.0.1_dd0e8b0f6e028ff64d114e91b30a69499b98c423.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
         <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-23.4.0_307df459730ed7a643cc8fde38d5c533ca5df4f2.jar" />
     </item>
     <item
-        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
         revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.4.0_88d11ac726804a0e8b674e4ef55ae694b20a16d1.jar" />
-    </item>
-    <item
-        jar="C:\Android\Project\diplom\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_ce9b588473c0041ee9375a15990422bc28e99dfe.jar" />
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Android\Project\diplom\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-24.0.0_a2f6bd33356429e5ba6f314316cc21c505d768fd.jar" />
     </item>
 
 </items>

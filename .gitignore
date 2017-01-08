@@ -35,3 +35,4 @@ proguard/
 *.bin
 .gradle/2.8/taskArtifacts/fileSnapshots.bin
 *.bin
+app/google-services.json

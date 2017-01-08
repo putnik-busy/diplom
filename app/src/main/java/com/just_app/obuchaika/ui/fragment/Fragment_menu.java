@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.firebase.crash.FirebaseCrash;
 import com.just_app.obuchaika.utils.CustomViewAware;
 import com.just_app.obuchaika.model.Subject;
 import com.just_app.obuchaika.R;
@@ -76,7 +77,7 @@ public class Fragment_menu extends Fragment implements ViewFactory,
         try {
             mSubject = loadMediaTask.get();
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            FirebaseCrash.report(e);
         }
     }
 
@@ -98,7 +99,7 @@ public class Fragment_menu extends Fragment implements ViewFactory,
                 mSubject = mapper.readValue(inputStream, Subject.class);
                 inputStream.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                FirebaseCrash.report(e);
             }
             return mSubject;
         }
@@ -172,7 +173,7 @@ public class Fragment_menu extends Fragment implements ViewFactory,
                 mp.prepare();
                 mp.start();
             } catch (IOException e) {
-                e.printStackTrace();
+                FirebaseCrash.report(e);
             }
         }
     }
@@ -224,6 +225,7 @@ public class Fragment_menu extends Fragment implements ViewFactory,
                 OnChangePhoto();
             }
         } catch (Exception e) {
+            FirebaseCrash.report(e);
             return true;
         }
         return true;

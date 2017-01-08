@@ -18,8 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.just_app.obuchaika.model.Subject_Question;
+import com.google.firebase.crash.FirebaseCrash;
 import com.just_app.obuchaika.R;
+import com.just_app.obuchaika.model.Subject_Question;
 import com.just_app.obuchaika.ui.activity.Activity_finish;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -70,7 +71,7 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
         try {
             mSubQuest = loadQuestionTask.get();
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            FirebaseCrash.report(e);
         }
     }
 
@@ -92,7 +93,7 @@ public class Test_Fragment extends Fragment implements View.OnClickListener {
                 mSubQuest = mapper.readValue(inputStream, Subject_Question.class);
                 inputStream.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                FirebaseCrash.report(e);
             }
             return mSubQuest;
         }
